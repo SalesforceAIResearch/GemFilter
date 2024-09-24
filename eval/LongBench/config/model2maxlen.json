@@ -1,0 +1,22 @@
+{
+    "llama2-7b-chat-4k": 3500,
+    "longchat-v1.5-7b-32k": 31500,
+    "xgen-7b-8k": 7500,
+    "internlm-7b-8k": 7500,
+    "chatglm2-6b": 31500,
+    "chatglm2-6b-32k": 31500,
+    "chatglm3-6b-32k": 31500,
+    "vicuna-v1.5-7b-16k": 15500,
+    "llama-3.1-8b-instruct": 128000,
+    "llama-3.1-8b-instruct-gemfilter": 128000,
+    "llama-3.1-8b-instruct-snapkv": 128000,
+    "llama-3.1-8b-instruct-h2o": 8192,
+    "mistral-nemo-instruct-2407": 128000,
+    "mistral-nemo-instruct-2407-gemfilter": 128000,
+    "mistral-nemo-instruct-2407-snapkv": 128000,
+    "mistral-nemo-instruct-2407-h2o": 8192,
+    "phi-3.5-mini-instruct": 128000,
+    "phi-3.5-mini-instruct-gemfilter": 128000,
+    "phi-3.5-mini-instruct-snapkv": 128000,
+    "phi-3.5-mini-instruct-h2o": 8192
+}
