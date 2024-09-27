@@ -4,7 +4,7 @@ This is an official PyTorch implementation of the paper with the title **Discove
 
 We propose an algorithm that uses early layers of an LLM as filters to select and compress input tokens, significantly reducing the context length for subsequent processing.
 
-[[arXiv paper]()]
+[[arXiv paper]()]`
 
 ![GemFilter](./assets/intro.png)
 
@@ -51,6 +51,24 @@ GemFilter can be easily integrated with any transformer models. You can follow t
 
 The detailed algorithm of GemFilter is in [`gem_filter_utils.py`](./my_baseline/GemFilter/gem_filter_utils.py) and [`my_generation.py`](./my_utils/my_generation.py).
 
+
+## Partial Results
+
+### Needle-in-a-Haystack
+
+Evaluate on [Needle-in-a-Haystack](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) benchmark. See more details [here](./eval/needle).
+
+![Pressure Test Result on Needle-in-a-Haystack](./assets/needle.png)
+
+### LongBench
+
+Evaluate on [LongBench](https://github.com/THUDM/LongBench) benchmark. See more details [here](./eval/LongBench).
+
+![Comprehensive Experiment Results on LongBench](./assets/longbench.png)
+
+### Running Time and GPU Memory
+
+![Running Time and GPU Memory](./assets/complexity.png)
 
 
 ## Citation
