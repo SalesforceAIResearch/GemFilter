@@ -49,13 +49,6 @@ GemFilter can be easily integrated with any transformer models. You can follow t
 
 The detailed algorithm of GemFilter is in [`gem_filter_utils.py`](./my_baseline/GemFilter/gem_filter_utils.py) and [`my_generation.py`](./my_utils/my_generation.py).
 
-This repo supports four methods: GemFilter, SnapKV, H2O, and standard attention.
-
-```python
-parser.add_argument('--modified', type=str, default=None, \
-    choices=['gemfilter', 'snapkv', 'h2o']) # None for standard attention
-```
-
 ## Partial Results
 
 ### Needle-in-a-Haystack
