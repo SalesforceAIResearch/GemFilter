@@ -6,7 +6,10 @@ from my_utils.my_generation import set_topk, my_greedy_generate_selection, my_gr
 from my_utils.load_model import load_model
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', type=str, required=True) # huggingface model id
+parser.add_argument('--model', type=str, required=True, 
+                    choices=['meta-llama/Meta-Llama-3.1-8B-Instruct', 
+                             'mistralai/Mistral-Nemo-Instruct-2407',
+                             'microsoft/Phi-3.5-mini-instruct']) # huggingface model id
 parser.add_argument('--modified', type=str, default=None, choices=['gemfilter', 'snapkv', 'h2o']) # None for standard attention
 parser.add_argument('--topk', type=int, default=1024, help='KV cache size')
 parser.add_argument('--ctx_len', type=int, default=32000, help='haystack context token length')
@@ -28,6 +31,8 @@ elif model_id == 'mistralai/Mistral-Nemo-Instruct-2407':
     select_layer_idx = 19  # 19 out of 40
 elif model_id == 'microsoft/Phi-3.5-mini-instruct':
     select_layer_idx = 19  # 19 out of 32
+else:
+    raise NotImplementedError
 
 torch_dtype=torch.float16
 model, tokenizer = load_model(model_id, modified=modified, torch_dtype=torch_dtype, flash_attention_2=flash_attention_2)
